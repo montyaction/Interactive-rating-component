@@ -1,4 +1,3 @@
-console.log("hello there are js file connected");
 
 const ratingsForm = document.getElementById("ratings-form");
 
@@ -11,6 +10,7 @@ ratingsForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const userRating = document.querySelector('input[name="rating"]:checked');
+    console.log(userRating);
 
     if (userRating !== null) {
 
@@ -18,6 +18,6 @@ ratingsForm.addEventListener("submit", (e) => {
         
         thanks.classList.toggle("hide-section");
 
-        document.getElementById("user-choice").innerHTML = userRating.ariaValueMax; 
+        document.getElementById("user-choice").innerHTML = userRating.value; 
     }
 });
